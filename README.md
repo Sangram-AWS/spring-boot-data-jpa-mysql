@@ -1,118 +1,197 @@
-# Spring Boot JPA MySQL - Building Rest CRUD API example
+# Construction Workforce HRMS Backend
 
-For more detail, please visit:
-> [Spring Boot JPA + MySQL - Building Rest CRUD API example](https://www.bezkoder.com/spring-boot-jpa-crud-rest-api/)
+## Forked HRMS Project
 
-> [Spring Boot JPA + PostgreSQL - Building Rest CRUD API example](https://www.bezkoder.com/spring-boot-postgresql-example/)
+Forked HRMS backend focused on workforce attendance, overtime tracking, Redis caching, and settlement workflows.
 
-Front-end that works well with this Back-end
-> [Angular 8](https://www.bezkoder.com/angular-crud-app/) / [Angular 10](https://www.bezkoder.com/angular-10-crud-app/) / [Angular 11](https://www.bezkoder.com/angular-11-crud-app/) / [Angular 12](https://www.bezkoder.com/angular-12-crud-app/) / [Angular 13](https://www.bezkoder.com/angular-13-crud-example/) / [Angular 14](https://www.bezkoder.com/angular-14-crud-example/) / [Angular 15](https://www.bezkoder.com/angular-15-crud-example/) / [Angular 16](https://www.bezkoder.com/angular-16-crud-example/) / [Angular 17 Client](https://www.bezkoder.com/angular-17-crud-example/)
+---
 
-> [Vue 2 Client](https://www.bezkoder.com/vue-js-crud-app/) / [Vue 3 Client](https://www.bezkoder.com/vue-3-crud/) / [Vuetify Client](https://www.bezkoder.com/vuetify-data-table-example/)
+# Why This HRMS?
 
-> [React Client](https://www.bezkoder.com/react-hooks-crud-axios-api/) / [React Redux Client](https://www.bezkoder.com/redux-toolkit-crud-react-hooks/)
+I selected this HRMS because construction workforce management involves real-time attendance tracking, payroll accuracy, overtime settlement, and scalability challenges that closely match real backend engineering problems.
 
-More Practice:
-> [Spring Boot Validate Request Body](https://www.bezkoder.com/spring-boot-validate-request-body/)
+---
 
-> [Spring Boot File upload example with Multipart File](https://www.bezkoder.com/spring-boot-file-upload/)
+# Tech Stack
 
-> [Spring Boot Pagination & Filter example | Spring JPA, Pageable](https://www.bezkoder.com/spring-boot-pagination-filter-jpa-pageable/)
+* Java 21
+* Spring Boot 3
+* PostgreSQL (Supabase)
+* Redis
+* Hibernate / JPA
+* Maven
 
-> [Spring Data JPA Sort/Order by multiple Columns | Spring Boot](https://www.bezkoder.com/spring-data-sort-multiple-columns/)
+---
 
-> [Spring Boot Repository Unit Test with @DataJpaTest](https://www.bezkoder.com/spring-boot-unit-test-jpa-repo-datajpatest/)
+# Setup Instructions
 
-> [Spring Boot Rest Controller Unit Test with @WebMvcTest](https://www.bezkoder.com/spring-boot-webmvctest/)
+## 1. Clone Repository
 
-> Cache the result: [Spring Boot Redis Cache example](https://www.bezkoder.com/spring-boot-redis-cache-example/)
+git clone <repo-url>
 
-> Documentation: [Spring Boot with Swagger 3 example](https://www.bezkoder.com/spring-boot-swagger-3/)
+cd spring-boot-data-jpa-mysql
 
-> Reactive Rest API: [Spring Boot WebFlux example](https://www.bezkoder.com/spring-boot-webflux-rest-api/)
+---
 
-> [Deploy Spring Boot App on AWS – Elastic Beanstalk](https://www.bezkoder.com/deploy-spring-boot-aws-eb/)
+## 2. Configure Environment Variables
 
-Exception Handling:
-> [Spring Boot @ControllerAdvice & @ExceptionHandler example](https://www.bezkoder.com/spring-boot-controlleradvice-exceptionhandler/)
+Windows PowerShell:
 
-> [@RestControllerAdvice example in Spring Boot](https://www.bezkoder.com/spring-boot-restcontrolleradvice/)
+$env:DB_USERNAME="postgres"
 
-Associations:
-> [Spring Boot One To One example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-one-to-one/)
+$env:DB_PASSWORD="your-password"
 
-> [Spring Boot One To Many example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-one-to-many/)
+---
 
-> [Spring Boot Many To Many example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-many-to-many/)
+## 3. Start Redis
 
-Security:
-> [Spring Boot + Spring Security JWT Authentication & Authorization](https://www.bezkoder.com/spring-boot-jwt-authentication/)
+WSL:
 
-Deployment:
-> [Deploy Spring Boot App on AWS – Elastic Beanstalk](https://bezkoder.com/deploy-spring-boot-aws-eb/)
+redis-server
 
-> [Docker Compose Spring Boot and MySQL example](https://www.bezkoder.com/docker-compose-spring-boot-mysql/)
+Verify:
 
-Fullstack:
-> [Vue.js + Spring Boot + MySQL example](https://bezkoder.com/spring-boot-vue-js-mysql/)
+redis-cli ping
 
-> [Vue.js + Spring Boot + PostgreSQL example](https://bezkoder.com/spring-boot-vue-js-postgresql/)
+---
 
-> [Angular 10 + Spring Boot + MySQL example](https://www.bezkoder.com/angular-10-spring-boot-crud/)
+## 4. Run Application
 
-> [Angular 11 + Spring Boot + MySQL example](https://www.bezkoder.com/angular-11-spring-boot-crud/)
-
-> [Angular 12 + Spring Boot + MySQL example](https://bezkoder.com/angular-12-spring-boot-mysql/)
-
-> [Angular 13 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-13-mysql/)
-
-> [Angular 14 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-14-mysql/)
-
-> [Angular 15 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-15-mysql/)
-
-> [Angular 16 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-16-mysql/)
-
-> [Angular 17 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-17-mysql/)
-
-> [Angular 10 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/angular-10-spring-boot-postgresql/)
-
-> [Angular 11 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/angular-11-spring-boot-postgresql/)
-
-> [Angular 12 + Spring Boot + PostgreSQL example](https://bezkoder.com/angular-12-spring-boot-postgresql/)
-
-> [Angular 13 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-angular-13-postgresql/)
-
-> [Angular 14 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-angular-14-postgresql/)
-
-> [Angular 15 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-angular-15-postgresql/)
-
-> [Angular 16 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-angular-16-postgresql/)
-
-> [Angular 17 + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-angular-17-postgresql/)
-
-> [Angular 13 + Spring Boot + H2 Embedded Database example](https://www.bezkoder.com/spring-boot-angular-13-crud/)
-
-> [Angular 14 + Spring Boot + H2 Embedded Database example](https://www.bezkoder.com/spring-boot-angular-14-crud/)
-
-> [Angular 15 + Spring Boot + H2 Embedded Database example](https://www.bezkoder.com/spring-boot-angular-15-crud/)
-
-> [Angular 16 + Spring Boot + H2 Embedded Database example](https://www.bezkoder.com/spring-boot-angular-16-crud/)
-
-> [Angular 17 + Spring Boot + H2 Embedded Database example](https://www.bezkoder.com/spring-boot-angular-17-crud/)
-
-> [React + Spring Boot + MySQL example](https://www.bezkoder.com/react-spring-boot-crud/)
-
-> [React + Spring Boot + PostgreSQL example](https://www.bezkoder.com/spring-boot-react-postgresql/)
-
-Run both Back-end & Front-end in one place:
-> [Integrate Angular with Spring Boot Rest API](https://www.bezkoder.com/integrate-angular-spring-boot/)
-
-> [Integrate React.js with Spring Boot Rest API](https://www.bezkoder.com/integrate-reactjs-spring-boot/)
-
-> [Integrate Vue.js with Spring Boot Rest API](https://www.bezkoder.com/integrate-vue-spring-boot/)
-
-## Run Spring Boot application
-```
 mvn spring-boot:run
-```
 
+---
+
+# API Endpoints
+
+## Attendance
+
+POST /api/attendance/clock-in
+
+POST /api/attendance/clock-out
+
+GET /api/attendance/active
+
+GET /api/attendance/log
+
+---
+
+## Overtime
+
+GET /api/overtime/summary/{workerId}
+
+POST /api/overtime/settle/{workerId}
+
+---
+
+# Sample curl Commands
+
+## Clock In
+
+curl -X POST http://localhost:8080/api/attendance/clock-in
+-H "Content-Type: application/json"
+-d "{"workerId":1,"siteId":2}"
+
+## Active Workers
+
+curl http://localhost:8080/api/attendance/active
+
+---
+
+# Business Rules
+
+* Overtime starts after 8 hours/day
+* First 2 overtime hours use 1.5x rate
+* Remaining overtime uses 2x rate
+* Monthly overtime cap = 60 hours
+* Current month cannot be settled
+* No duplicate clock-ins
+* No partial settlement allowed
+
+---
+
+# Redis Caching Strategy
+
+Redis is used for active worker caching because site supervisors need extremely fast worker lookup during shift starts.
+
+The system gracefully falls back to PostgreSQL if Redis becomes unavailable.
+
+---
+
+# Performance Optimizations
+
+* Pagination for attendance logs
+* EntityGraph to prevent N+1 queries
+* HikariCP connection pooling
+* Redis caching
+* Transactional settlement handling
+
+---
+
+# LF Ticket Fixes
+
+## LF-201
+
+Added configurable CORS support.
+
+## LF-202
+
+Implemented graceful Redis degradation.
+
+## LF-203
+
+Implemented pagination and fixed N+1 query issue using EntityGraph.
+
+## LF-204
+
+Implemented transactional settlement handling.
+
+## LF-205
+
+Optimized HikariCP connection pooling configuration.
+
+---
+
+# AI Tools Used
+
+## ChatGPT
+
+Used for:
+
+* architecture guidance
+* debugging support
+* Redis integration understanding
+* pagination optimization
+* transactional flow improvements
+
+## Claude
+
+Used for:
+
+* brainstorming architecture decisions
+* understanding business constraints
+* refining overtime settlement flow
+
+---
+
+# Design Decisions
+
+## Why Redis?
+
+Active worker lookup requires low latency during shift start operations.
+
+## Why Transactions?
+
+Settlement cannot be partially completed because payroll depends on consistent data.
+
+## Why Pagination?
+
+Attendance logs can grow very large across many construction sites.
+
+## What I'd Improve With More Time
+
+* JWT authentication
+* Role-based authorization
+* Docker deployment
+* Kafka-based event processing
+* Monitoring and metrics
+* Automated testing
